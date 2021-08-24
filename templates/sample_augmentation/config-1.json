@@ -1,0 +1,59 @@
+{
+    "debug": false,
+    "random_sequence": true,
+    "max_augmentations_per_image": 7,
+    "augmentations": {
+        "perspective_transform": {
+            "probablity": 1,
+            "min_scale": 0.01,
+            "max_scale": 0.04
+        }
+    },
+    "mutually_exclusive_augmentations": [
+        [
+            "gaussian_blur",
+            "defocus",
+            "motion_blur",
+            "blur",
+            "median_blur",
+            "binarized_blur"
+        ],
+        [
+            "motion_blur",
+            "intensity_multiplier",
+            "contrast",
+            "spatter"
+        ],
+        [
+            "image_compression",
+            "quantization",
+            "posterize"
+        ],
+        [
+            "blotches",
+            "spatter"
+        ],
+        [
+            "gaussian_warp",
+            "elastic_transform",
+            "perspective_transform",
+            "1d_surface_distort"
+        ],
+        [
+            "multiscale_black_noise",
+            "fibrous_noise"
+        ],
+        [
+            "grayscale",
+            "fibrous_noise"
+        ],
+        [
+            "grayscale",
+            "multiscale_black_noise"
+        ],
+        [
+            "grayscale",
+            "blotches"
+        ]
+    ]
+}

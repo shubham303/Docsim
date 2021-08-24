@@ -1,0 +1,8 @@
+*.pyc
+fonts/
+output/
+*.dll
+.idea/
+output/
+output_augmented/
+output_augmented_transform/
