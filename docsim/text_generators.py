@@ -139,11 +139,7 @@ class NameGeneratorFromList(NameGenerator):
         else:
             raise Exception("names file for given language format not found")
             
-        #TODO below hindi characters list is used as a workaround for missing characters in trained CLOVA model. Once
-        # those characters are added, remove these 3 lines.
-        hindi_chracters= open("Characters-Hindi.csv")
-        hindi_chracters = hindi_chracters.readline().split(",")
-        self.hindi_characters= list(set(hindi_chracters))
+
 
     def generate(self,min_len=10, max_len=10):
 
@@ -151,17 +147,7 @@ class NameGeneratorFromList(NameGenerator):
 
         text=""
         for j in range(2):
-            while(True):
-                name = random.choice(self.names)
-                char_list = list(name)
-                i=0
-                for i, char in enumerate(char_list):
-                    if char not in self.hindi_characters:
-                        break
-                
-                if i< len(char_list)-1:
-                    continue
-                break
+            name = random.choice(self.names)
             text += name
             if j == 0:
                 text+=" "
